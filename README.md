@@ -24,4 +24,4 @@ This codebase is *under construction* and will contain:
 You can download ImageNet pretrained models [here](https://drive.google.com/drive/folders/1KCt22JTob1hHiPmpLOlgZo3fvTRc11SJ).
 
 ## ImageNet
-Please refer to [imagenet/README.md](./imagenet/README.md).
+Please refer to [imagenet/README.md](./imagenet/).
