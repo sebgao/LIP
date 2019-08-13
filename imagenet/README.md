@@ -2,7 +2,7 @@
 Our training and testing code `main.py` is modified from [PyTorch official example one](https://github.com/pytorch/examples/tree/master/imagenet). You can refer to [this](https://github.com/pytorch/examples/tree/master/imagenet) for preparing ImageNet dataset and dependencies.
 
 ## Training
-The code `main.py` is specialized in single node, multiple GPUs training for faster speed. You can configure settings in `train-lip_resnet50` in `Makefile` and then train LIP-ResNet-50 by simply
+The code `main.py` is specialized in single node, multiple GPUs training for the faster speed. You can configure settings in `train-lip_resnet50` in `Makefile` and then train LIP-ResNet-50 by simply
 ```
 make train-lip_resnet50
 ```
