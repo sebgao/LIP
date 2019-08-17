@@ -25,7 +25,7 @@ class SoftGate(nn.Module):
         super(SoftGate, self).__init__()
 
     def forward(self, x):
-        return torch.sigmoid(x).mul_(COEFF)
+        return torch.sigmoid(x).mul(COEFF)
 
 
 class BottleneckShared(nn.Module):

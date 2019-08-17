@@ -199,6 +199,9 @@ def main_worker(gpu, ngpus_per_node, args):
                                 momentum=args.momentum,
                                 weight_decay=args.weight_decay)
 
+    for idx, param_group in enumerate(optimizer.param_groups):
+        param_group['init_lr'] = args.lr
+
     if args.resume:
         if os.path.isfile(args.resume):
             log("=> loading checkpoint '{}'".format(args.resume))

@@ -15,6 +15,8 @@ This codebase is *under construction* and will contain:
 
 [8.13] We uploaded the code of LIP-ResNets and their ImageNet pretrained models (LIP-ResNet-50 & 101).
 
+[8.17] Fixed the missing `init_lr` key and the possible in_place `mul_` operation problem (reported in PyTorch 1.1).
+
 ## Dependencies
 1. Python 3.6
 2. PyTorch 1.0+

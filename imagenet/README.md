@@ -7,6 +7,8 @@ The code `main.py` is specialized in single node, multiple GPUs training for the
 make train-lip_resnet50
 ```
 
+You can resort to [PyTorch official example one](https://github.com/pytorch/examples/tree/master/imagenet) if the command above fails. For that, you need to modify the learning rate schedule to be consistent with the paper, i.e., lr decays 10x at the 30, 60, 80-th epoch.
+
 ## Evaluating
 Alike, you can evaluate the models by
 ```
