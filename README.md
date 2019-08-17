@@ -2,8 +2,9 @@
 
 PyTorch implementations of LIP (ICCV 2019).
 
+[[arxiv link]](https://arxiv.org/abs/1908.04156)
 
-This codebase is *under construction* and will contain:
+This codebase is __under construction__ and will contain:
 
 - [x] the implementation of LIP based on PyTorch primitives,
 - [x] LIP-ResNet,
