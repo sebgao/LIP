@@ -10,13 +10,15 @@ This codebase is __under construction__ and will contain:
 - [x] LIP-ResNet,
 - [ ] LIP-DenseNet,
 - [x] ImageNet training and testing code,
-- [ ] CUDA implementation of LIP.
+- [x] CUDA implementation of LIP.
 
 ## NEWS
 
 [8.13] We uploaded the code of LIP-ResNets and their ImageNet pretrained models (LIP-ResNet-50 & 101).
 
 [8.17] Fixed the missing `init_lr` key and the possible in_place `mul_` operation problem (reported in PyTorch 1.1).
+
+[9.5] CUDA LIP is now available.
 
 ## Dependencies
 1. Python 3.6
@@ -28,3 +30,7 @@ You can download ImageNet pretrained models [here](https://drive.google.com/driv
 
 ## ImageNet
 Please refer to [imagenet/README.md](./imagenet/).
+
+
+## CUDA LIP
+Please refer to [cuda-lip/README.md](./cuda-lip/).
