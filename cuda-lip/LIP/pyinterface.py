@@ -46,7 +46,7 @@ def primitive_lip2d(x, logit, kernel=3, stride=2, padding=1):
 
 def cuda_lip2d(x, logit, kernel=3, stride=2, padding=1):
     '''
-        This function ruus the CUDA version of LIP when the input is 
+        This function runs the CUDA version of LIP when the input is a
         CUDA tensor, otherwise incurs an error.
         
         Args:
@@ -57,10 +57,10 @@ def cuda_lip2d(x, logit, kernel=3, stride=2, padding=1):
             padding : (int) - the paddng size.
 
         Note:
-        1. when the input `x` is cuda tensor, the logit should be of the same 
-        shape with the input `x`. Broadcasting is currently not supported 
-        by CUDA LIP.
-        2. the `kernel`, `stride` and `padding` are restricted to int type, *not supporting tuples*. 
+        1. the logit should be of the same shape with the input `x`.
+        Broadcasting is currently not supported by CUDA LIP.
+        2. the `kernel`, `stride` and `padding` are restricted to int type,
+        *not tuples*. 
     '''
     
     if x.is_cuda:

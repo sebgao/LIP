@@ -6,8 +6,8 @@ setup(
     packages=find_packages(),
     ext_modules=[
         CUDAExtension('lip_cuda_interface', [
-            'lip_cuda.cpp',
-            'lip_cuda_kernel.cu',
+            'src/lip_cuda.cpp',
+            'src/lip_cuda_kernel.cu',
         ]),
     ],
     cmdclass={
