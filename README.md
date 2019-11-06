@@ -4,11 +4,11 @@ PyTorch implementations of LIP (ICCV 2019).
 
 [[arxiv link]](https://arxiv.org/abs/1908.04156)
 
-This codebase is __under construction__ and will contain:
+This codebase is now complete and it contains:
 
 - [x] the implementation of LIP based on PyTorch primitives,
 - [x] LIP-ResNet,
-- [ ] LIP-DenseNet,
+- [x] LIP-DenseNet,
 - [x] ImageNet training and testing code,
 - [x] CUDA implementation of LIP.
 
@@ -19,6 +19,8 @@ This codebase is __under construction__ and will contain:
 [8.17] Fixed the missing `init_lr` key and the possible in_place `mul_` operation problem (reported in PyTorch 1.1).
 
 [9.5] CUDA LIP is now available.
+
+[11.6] The LIP-DensNet model is available (sorry for my procrastination). Change the name of `ProjectionLIP` to `SimplifiedLIP` for clarification.
 
 ## Dependencies
 1. Python 3.6
