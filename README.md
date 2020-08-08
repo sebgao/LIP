@@ -36,3 +36,16 @@ Please refer to [imagenet/README.md](./imagenet/).
 
 ## CUDA LIP
 Please refer to [cuda-lip/README.md](./cuda-lip/).
+
+## Misc
+If you find our research helpful, please consider citing our paper.
+
+```
+@InProceedings{LIP_2019_ICCV,
+author = {Gao, Ziteng and Wang, Limin and Wu, Gangshan},
+title = {LIP: Local Importance-Based Pooling},
+booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+month = {October},
+year = {2019}
+}
+```
