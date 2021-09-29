@@ -35,8 +35,11 @@ lip2d(x, logit_module_b(x)) // it approximates max pooling
 logit_module_c = lambda x: x.mul(0)
 lip2d(x, logit_module_c(x)) // it is average pooling
 
-logit_module_d = MyLogitModule() // Your customized logit module (a FCN) begins here
+logit_module_d = nn.Conv2d(in_channels, in_channels, 1) // the simple projection form logit module
 lip2d(x, logit_module_d(x))
+
+logit_module_e = MyLogitModule() // Your customized logit module (a FCN) begins here
+lip2d(x, logit_module_e(x))
 
 ```
 
