@@ -14,13 +14,7 @@ This codebase is now complete and it contains:
 
 ## NEWS
 
-[8.13] We uploaded the code of LIP-ResNets and their ImageNet pretrained models (LIP-ResNet-50 & 101).
-
-[8.17] Fixed the missing `init_lr` key and the possible in_place `mul_` operation problem (reported in PyTorch 1.1).
-
-[9.5] CUDA LIP is now available.
-
-[11.6] The LIP-DensNet model is available (sorry for my procrastination). Change the name of `ProjectionLIP` to `SimplifiedLIP` for clarification.
+[2021] A case of LIP when `G(I)=I`, SoftPool, is accepted to ICCV. Check [SoftPool](https://github.com/alexandrosstergiou/SoftPool).
 
 ## Dependencies
 1. Python 3.6
