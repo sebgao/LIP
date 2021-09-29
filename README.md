@@ -24,7 +24,7 @@ def lip2d(x, logit, kernel=3, stride=2, padding=1):
     return F.avg_pool2d(x*weight, kernel, stride, padding)/F.avg_pool2d(weight, kernel, stride, padding)
 ```
 
-You need a sub fully convolutional network (FCN) as the logit module (which the output is of the same shape as the input) to produce the logit. You can customize the logit module like
+You need a sub fully convolutional network (FCN) as the logit module (whose output is of the same shape as the input) to produce the logit. You can customize the logit module like
 ```
 logit_module_a = nn.Identity()
 lip2d(x, logit_module_a(x)) // it gives SoftPool
