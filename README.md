@@ -2,7 +2,7 @@
 
 PyTorch implementations of LIP (ICCV 2019).
 
-[[arxiv link]](https://arxiv.org/abs/1908.04156)
+[[paper link]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Gao_LIP_Local_Importance-Based_Pooling_ICCV_2019_paper.pdf)
 
 This codebase is now complete and it contains:
 
