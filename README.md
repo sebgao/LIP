@@ -12,13 +12,37 @@ This codebase is now complete and it contains:
 - [x] ImageNet training and testing code,
 - [x] CUDA implementation of LIP.
 
-## NEWS
+## News
 
-[2021] A case of LIP when `G(I)=I`, SoftPool, is accepted to ICCV. Check [SoftPool](https://github.com/alexandrosstergiou/SoftPool).
+[2021] A case of LIP when `G(I)=I`, SoftPool, is accepted to ICCV 2021. Check [SoftPool](https://github.com/alexandrosstergiou/SoftPool).
+
+## A Simple Step to Customize LIP
+LIP as the learnable generic pooling, its code is simply (in PyTorch):
+```
+def lip2d(x, logit, kernel=3, stride=2, padding=1):
+    weight = logit.exp()
+    return F.avg_pool2d(x*weight, kernel, stride, padding)/F.avg_pool2d(weight, kernel, stride, padding)
+```
+
+You need a sub fully convolutional network (FCN) as the logit module (which the output is of the same shape as the input) to produce the logit. You can customize the logit module like
+```
+logit_module_a = nn.Identity()
+lip2d(x, logit_module_a(x)) // it gives SoftPool
+
+logit_module_b = lambda x: x.mul(20)
+lip2d(x, logit_module_b(x)) // it approximates max pooling
+
+logit_module_c = lambda x: x.mul(0)
+lip2d(x, logit_module_c(x)) // it is average pooling
+
+logit_module_d = MyLogitModule() // Your customized logit module begins here
+lip2d(x, logit_module_d(x)) // Your customized LIP begins here
+
+```
 
 ## Dependencies
 1. Python 3.6
-2. PyTorch 1.0+
+2. PyTorch 1.0
 3. tensorboard and tensorboardX
 
 ## Pretrained Models
